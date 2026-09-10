@@ -1,0 +1,247 @@
+.modal-back {
+	position: fixed;
+	background: rgba(0,0,0,0.8);
+	z-index: 999;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.modal-window {
+	position: fixed;
+	background: #FFF;
+	box-shadow: 0 4px 17.3px 4px rgba(0, 0, 0, 0.15);
+	z-index: 1000;
+	display: none;
+	text-align: left;
+	overflow: auto;
+	.modal-window-gradient {
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		overflow: hidden;
+		width: 100%;
+		height: 1000px;
+		display: block;
+		&:before {
+			background: url('data:image/svg+xml,<svg width="791" height="775" viewBox="0 0 791 775" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.8" clip-path="url(%23clip0_451_5239)" filter="url(%23filter0_f_451_5239)"><path d="M435.583 425H338.239L338.421 445.38" fill="url(%23paint0_linear_451_5239)"/><path d="M402.181 575L452.762 469.022L435.583 425L381.186 518.75L402.181 575Z" fill="url(%23paint1_linear_451_5239)"/><path d="M392.799 438.231L323.972 379.438L307.232 393.965" fill="url(%23paint2_linear_451_5239)"/><path d="M245.019 524.114L368.511 479.734L392.799 438.231L276.732 471.663L245.019 524.114Z" fill="url(%23paint3_linear_451_5239)"/><path d="M351.6 421.739V338.587L327.741 338.742" fill="url(%23paint4_linear_451_5239)"/><path d="M176 393.207L300.065 436.413L351.6 421.739L241.85 375.272L176 393.207Z" fill="url(%23paint5_linear_451_5239)"/><path d="M336.11 385.193L404.938 326.4L387.931 312.101" fill="url(%23paint6_linear_451_5239)"/><path d="M235.57 258.957L287.525 364.446L336.111 385.193L296.973 286.046L235.57 258.957Z" fill="url(%23paint7_linear_451_5239)"/><path d="M355.418 350H452.761L452.58 329.62" fill="url(%23paint8_linear_451_5239)"/><path d="M388.82 200L338.239 305.978L355.418 350L409.815 256.25L388.82 200Z" fill="url(%23paint9_linear_451_5239)"/><path d="M398.2 336.769L467.028 395.563L483.767 381.035" fill="url(%23paint10_linear_451_5239)"/><path d="M545.981 250.886L422.488 295.266L398.2 336.769L514.268 303.337L545.981 250.886Z" fill="url(%23paint11_linear_451_5239)"/><path d="M439.4 353.261V436.413L463.259 436.258" fill="url(%23paint12_linear_451_5239)"/><path d="M615 381.793L490.935 338.587L439.4 353.261L549.15 399.728L615 381.793Z" fill="url(%23paint13_linear_451_5239)"/><path d="M454.889 389.807L386.062 448.601L403.068 462.899" fill="url(%23paint14_linear_451_5239)"/><path d="M555.429 516.043L503.475 410.554L454.889 389.807L494.026 488.954L555.429 516.043Z" fill="url(%23paint15_linear_451_5239)"/></g><defs><filter id="filter0_f_451_5239" x="-24" y="0" width="839" height="775" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_451_5239"/></filter><linearGradient id="paint0_linear_451_5239" x1="386.911" y1="425" x2="386.911" y2="445.38" gradientUnits="userSpaceOnUse"><stop stop-color="%23EC4899"/><stop offset="1" stop-color="%239333EA" stop-opacity="0.26"/></linearGradient><linearGradient id="paint1_linear_451_5239" x1="416.974" y1="425" x2="416.974" y2="575" gradientUnits="userSpaceOnUse"><stop stop-color="%23EC4899"/><stop offset="1" stop-color="%239333EA" stop-opacity="0.26"/></linearGradient><linearGradient id="paint2_linear_451_5239" x1="350.016" y1="379.438" x2="350.016" y2="438.231" gradientUnits="userSpaceOnUse"><stop stop-color="%23EC4899"/><stop offset="1" stop-color="%239333EA" stop-opacity="0.26"/></linearGradient><linearGradient id="paint3_linear_451_5239" x1="318.909" y1="438.231" x2="318.909" y2="524.114" gradientUnits="userSpaceOnUse"><stop stop-color="%23EC4899"/><stop offset="1" stop-color="%239333EA" stop-opacity="0.26"/></linearGradient><linearGradient id="paint4_linear_451_5239" x1="339.671" y1="338.587" x2="339.671" y2="421.739" gradientUnits="userSpaceOnUse"><stop stop-color="%23EC4899"/><stop offset="1" stop-color="%239333EA" stop-opacity="0.26"/></linearGradient><linearGradient id="paint5_linear_451_5239" x1="263.8" y1="375.272" x2="263.8" y2="436.413" gradientUnits="userSpaceOnUse"><stop stop-color="%23EC4899"/><stop offset="1" stop-color="%239333EA" stop-opacity="0.26"/></linearGradient><linearGradient id="paint6_linear_451_5239" x1="370.524" y1="312.101" x2="370.524" y2="385.193" gradientUnits="userSpaceOnUse"><stop stop-color="%23EC4899"/><stop offset="1" stop-color="%239333EA" stop-opacity="0.26"/></linearGradient><linearGradient id="paint7_linear_451_5239" x1="285.841" y1="258.957" x2="285.841" y2="385.193" gradientUnits="userSpaceOnUse"><stop stop-color="%23EC4899"/><stop offset="1" stop-color="%239333EA" stop-opacity="0.26"/></linearGradient><linearGradient id="paint8_linear_451_5239" x1="404.09" y1="329.62" x2="404.09" y2="350" gradientUnits="userSpaceOnUse"><stop stop-color="%23EC4899"/><stop offset="1" stop-color="%239333EA" stop-opacity="0.26"/></linearGradient><linearGradient id="paint9_linear_451_5239" x1="374.027" y1="200" x2="374.027" y2="350" gradientUnits="userSpaceOnUse"><stop stop-color="%23EC4899"/><stop offset="1" stop-color="%239333EA" stop-opacity="0.26"/></linearGradient><linearGradient id="paint10_linear_451_5239" x1="440.984" y1="336.769" x2="440.984" y2="395.563" gradientUnits="userSpaceOnUse"><stop stop-color="%23EC4899"/><stop offset="1" stop-color="%239333EA" stop-opacity="0.26"/></linearGradient><linearGradient id="paint11_linear_451_5239" x1="472.091" y1="250.886" x2="472.091" y2="336.769" gradientUnits="userSpaceOnUse"><stop stop-color="%23EC4899"/><stop offset="1" stop-color="%239333EA" stop-opacity="0.26"/></linearGradient><linearGradient id="paint12_linear_451_5239" x1="451.33" y1="353.261" x2="451.33" y2="436.413" gradientUnits="userSpaceOnUse"><stop stop-color="%23EC4899"/><stop offset="1" stop-color="%239333EA" stop-opacity="0.26"/></linearGradient><linearGradient id="paint13_linear_451_5239" x1="527.2" y1="338.587" x2="527.2" y2="399.728" gradientUnits="userSpaceOnUse"><stop stop-color="%23EC4899"/><stop offset="1" stop-color="%239333EA" stop-opacity="0.26"/></linearGradient><linearGradient id="paint14_linear_451_5239" x1="420.475" y1="389.807" x2="420.475" y2="462.899" gradientUnits="userSpaceOnUse"><stop stop-color="%23EC4899"/><stop offset="1" stop-color="%239333EA" stop-opacity="0.26"/></linearGradient><linearGradient id="paint15_linear_451_5239" x1="505.159" y1="389.807" x2="505.159" y2="516.043" gradientUnits="userSpaceOnUse"><stop stop-color="%23EC4899"/><stop offset="1" stop-color="%239333EA" stop-opacity="0.26"/></linearGradient><clipPath id="clip0_451_5239"><rect width="439" height="375" fill="white" transform="translate(176 200)"/></clipPath></defs></svg>') no-repeat;
+			width: 791px;
+			height: 775px;
+			display: block;
+			position: absolute;
+			content: '';
+			bottom: -270px;
+			opacity: 0.8;
+			filter: blur(100px);
+			left: 50%;
+			max-width: 100%;
+			transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+		}
+	}
+	.close-modal-window {
+		top: 0px;
+		right: 0px;
+		position: absolute;
+		background: url('data:image/svg+xml,<svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.70368e-08 11.5203L9.67603e-08 11.4875L0.0370371 11.4875L9.70368e-08 11.5203ZM12.963 11.4875L12.963 11.5203L12.9444 11.4875L12.963 11.4875ZM12.963 1.71951e-07L13 1.72443e-07L7.98148 5.76016L12.9815 11.4875L10.0556 11.4875L6.51852 7.43406L2.98148 11.4875L0.0555556 11.4875L5.03704 5.76016L0.0185185 2.45644e-10L2.94444 3.90575e-08L6.5 4.08627L10.0556 1.33385e-07L12.963 1.71951e-07Z" fill="%23EC4899"/></svg>') no-repeat center center;
+		width: 52px;
+		height: 52px;
+		display: block;
+		text-indent: -9999px;
+	}
+	.modal-window-content {
+		position: relative;
+		z-index: 1;
+		text-align: center;
+		#sib-container,
+		.sib-form {
+			padding: 0px;
+			background: none transparent;
+			margin: 0px;
+			font-family: $text-font;
+		}
+		.sib-form-block {
+			padding: 0px;
+		}
+		.modal-form {
+			.modal-form-heading {
+				margin: 0 0 26px 0;
+				h5 {
+					font-size: 20px;
+					line-height: 32px;
+					font-weight: 700;
+					background: var(--pink-violet-gradient, linear-gradient(105deg, #EC4899 0%, #A855F7 100%));
+					background-clip: text;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					margin: 0 0 6px 0;
+				}
+				p {
+					font-size: 14px;
+					line-height: 21px;
+					color: #1A1A2E;
+				}
+			}
+			form {
+				display: flex;
+				flex-direction: column;
+				row-gap: 8px;
+				.modal-form-checkboxes {
+					display: flex;
+					justify-content: space-between;
+					padding: 0 0 10px 0;
+					.entry__choice {
+						display: block;
+						margin: 0px!important;
+						padding: 0px!important;
+						text-indent: 0px!important;
+						.checkbox__label {
+							display: flex!important;
+							column-gap: 12px;
+							align-items: center;
+							color: rgba(0, 0, 0, 0.50);
+							font-size: 12px;
+							.checkbox {
+								margin: 0px;
+								width: 24px;
+								height: 24px;
+								border-radius: 2px;
+								border: 0.5px solid #CCC;
+								&:before { display: none; }
+							}
+						}
+						input:checked + .checkbox {
+							background: url('data:image/svg+xml,<svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7.33333L4.9 10C5.5 7.77778 7.36 2.86667 10 1" stroke="black" stroke-width="2"/></svg>') no-repeat center center transparent;
+						}
+					}
+				}
+				.modal-form-field {
+					padding: 0px;
+					text-align: left;
+					.entry__label {
+						font-size: 14px;
+						line-height: 21px;
+						font-weight: 700;
+						display: block;
+						color: #1E293B;
+						margin: 0 0 8px 0;
+						margin: 0 0 4px 0;
+					}
+					.entry__field {
+						border: none;
+						outline: none!important;
+						box-shadow: none!important;
+					}
+					input[type="text"],
+					input[type="email"] {
+						-webkit-appearance: none;
+						-moz-appearance: none;
+						appearance: none;
+						display: block;
+						border-radius: 8px;
+						border: var(--stroke-weight-1, 1px) solid var(--color-black-8, rgba(0, 0, 0, 0.08));
+						width: 100%;
+						height: 45px;
+						padding: 13px 17px 13px 17px;
+						line-height: 26px;
+						font-size: 18px;
+						font-family: $text-font;
+						color: #000;
+						position: relative;
+						z-index: 1;
+						box-shadow: none;
+						background: #FFF;
+						box-sizing: border-box;
+						&:focus {
+							border-color: #999;
+						}
+					}
+					.modal-form-field-help {
+						display: block;
+						padding: 6px 0 0 0;
+						font-size: 14px;
+						line-height: 21px;
+						color: #1E293B;
+					}
+					.entry_errored {
+						input[type="text"],
+						input[type="email"] {
+							border-color: #b31414;
+						}
+						.modal-form-field-help {
+							color: #b31414;
+						}	
+					}
+				}
+				.button {
+					width: 100%;
+					font-weight: none;
+					font-size: 18px;
+				}
+			}
+		}
+		#success-message {
+			border: none;
+			padding: 0px;
+		}
+		.modal-form-success {
+			h5 {
+				font-size: 20px;
+				line-height: 32px;
+				font-weight: 700;
+				background: var(--pink-violet-gradient, linear-gradient(105deg, #EC4899 0%, #A855F7 100%));
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				margin: 0 0 6px 0;
+			}
+			p {
+				font-size: 14px;
+				line-height: 21px;
+				color: #1A1A2E;
+			}
+			.buttons {
+				padding: 80px 0 0 0;
+				.button {
+					width: 100%;
+					color: #FFF;
+					font-weight: bold;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+
+@media all and (max-width: 1023px) and (min-width: 0px) {
+	.modal-window {
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		padding: 64px 20px;
+		text-align: center;
+	}
+}
+
+@media all and (min-width: 1024px) {
+	.modal-window {
+		top: 50%;
+		left: 50%;
+		width: 751px;
+		transform: translateX(-50%) translateY(-50%);
+		-webkit-transform: translateX(-50%) translateY(-50%);
+		-ms-transform: translateX(-50%) translateY(-50%);
+		padding: 88px 175px;
+		padding: 48px 175px;
+		max-height: calc(100% - 64px);
+	}
+}
+
+.modal-active {
+	.modal-back { display: block; }
+	.modal-window { display: block; }
+}

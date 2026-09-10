@@ -1,0 +1,90 @@
+.call-to-action {
+	border-radius: 40px;
+	background: var(--color-rose-605, rgba(236, 72, 153, 0.05));
+	padding: 64px 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+	position: relative;
+	z-index: 1;
+	h2 {
+		font-size: 40px;
+		line-height: 48px;
+		color: #FFF;
+		margin: 0 0 25px 0;
+		font-weight: 700;
+		span {
+			background: var(--pink-violet-gradient, linear-gradient(105deg, #EC4899 0%, #A855F7 100%));
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			padding-right: 4px;
+		}
+	}
+	p {
+		font-size: 16px;
+		line-height: 28px;
+		color: rgba(255, 255, 255, 0.7);
+		max-width: 370px;
+		margin: 0 0 48px 0;
+	}
+}
+
+.page-block-call-to-action {
+	padding: 0 0 32px 0;
+}
+
+@media all and (min-width: 1024px) {
+	.call-to-action {
+		padding: 96px 32px;
+		h2 {
+			font-size: 48px;
+			line-height: 76.8px;
+		}
+		p {
+			font-size: 20px;
+			line-height: 32px;
+		}
+	}
+}
+
+.page-block-business-call-to-action {
+	.container {
+		&:before {
+			position: absolute;
+			background: url('data:image/svg+xml,<svg width="537" height="415" viewBox="0 0 537 415" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(%23filter0_f_227_593)"><path d="M135.228 37.5L37 277.721L70.3542 377.5L176 165.007L135.228 37.5Z" fill="%23EC4899"/></g><g filter="url(%23filter1_f_227_593)"><path d="M499.528 120.163L252.405 199.443L197.452 289.156L428.113 233.39L499.528 120.163Z" fill="%23EC4899"/></g><defs><filter id="filter0_f_227_593" x="0.299999" y="0.799999" width="212.4" height="413.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur stdDeviation="18.35" result="effect1_foregroundBlur_227_593"/></filter><filter id="filter1_f_227_593" x="160.752" y="83.4631" width="375.476" height="242.393" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur stdDeviation="18.35" result="effect1_foregroundBlur_227_593"/></filter></defs></svg>') no-repeat;
+			width: 537px;
+			height: 415px;
+			content: '';
+			display: block;
+			top: -220px;
+			left: -30px;
+			filter: blur(18.350000381469727px);
+			opacity: 0.09;
+		}
+	}
+}
+
+@media all and (max-width: 1023px) and (min-width: 0px) {
+	.page-block-business-call-to-action {
+		.container {
+			&:before {
+				background-size: 100% 100%;
+				width: 268px;
+				height: 207px;
+				top: -110px;
+				left: -15px;
+			}
+		}
+	}
+}
+
+.page-block-accountants-call-to-action {
+	.call-to-action {
+		p {
+			max-width: 100%;
+		}
+	}
+}

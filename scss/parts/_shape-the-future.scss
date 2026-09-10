@@ -1,0 +1,63 @@
+.page-block-shape-the-future {
+	// background: url('data:image/svg+xml,<svg width="1512" height="522" viewBox="0 0 1512 522" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="-100" y="-99.8401" width="1712" height="721.59" fill="url(%23paint0_linear_227_737)"/><rect x="-100" y="-99.8401" width="1712" height="721.59" fill="url(%23paint1_linear_227_737)"/><defs><linearGradient id="paint0_linear_227_737" x1="1372.32" y1="851.352" x2="192.611" y2="-380.145" gradientUnits="userSpaceOnUse"><stop offset="0.3" stop-color="white" stop-opacity="0"/><stop offset="0.5" stop-color="white" stop-opacity="0.03"/><stop offset="0.7" stop-color="white" stop-opacity="0"/></linearGradient><linearGradient id="paint1_linear_227_737" x1="139.683" y1="851.352" x2="1319.39" y2="-380.145" gradientUnits="userSpaceOnUse"><stop offset="0.3" stop-color="white" stop-opacity="0"/><stop offset="0.5" stop-color="white" stop-opacity="0.05"/><stop offset="0.7" stop-color="white" stop-opacity="0"/></linearGradient></defs></svg>');
+	background: radial-gradient(98.99% 98.99% at 30% 70%, rgba(255, 56, 154, 0.16) 0%, rgba(35, 23, 46, 0.30) 60%);
+	padding: 64px 0;
+	position: relative;
+	overflow: hidden;
+	&:before {
+		width: 100%;
+		height: calc(100% + 200px);
+		z-index: 0;
+		content: '';
+		display: block;
+		position: absolute;
+		top: -100px;
+		left: 0px;
+		background: linear-gradient(66deg, var(--color-white-0, rgba(255, 255, 255, 0.00)) 30%, var(--color-white-5, rgba(255, 255, 255, 0.05)) 50%, var(--color-white-0, rgba(255, 255, 255, 0.00)) 70%), linear-gradient(294deg, var(--color-white-0, rgba(255, 255, 255, 0.00)) 30%, var(--color-white-3, rgba(255, 255, 255, 0.03)) 50%, var(--color-white-0, rgba(255, 255, 255, 0.00)) 70%);
+	}
+	.container {
+		z-index: 1;
+		text-align: center;
+		h2 {
+			background: linear-gradient(93deg, var(--color-white-solid, #FFF) 0%, var(--color-rose-60, #EC4899) 50%, var(--color-violet-56, #9333EA) 100%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-size: 32px;
+			line-height: 40px;
+			margin: 0 0 16px 0;
+			font-weight: 700;
+		}
+		p {
+			font-size: 17px;
+			line-height: 26px;
+			margin: 0 auto 0 auto;
+			max-width: 600px;
+			color: #FFF;
+		}
+		.buttons {
+			padding: 24px 0 0 0;
+			justify-content: center;
+			display: flex;
+		}
+	}
+}
+
+@media all and (min-width: 1024px) {
+	.page-block-shape-the-future {
+		padding: 127px 0;
+		.container {
+			h2 {
+				font-size: 48px;
+				line-height: 76.8px;
+			}
+			p {
+				font-size: 20px;
+				line-height: 32px;
+			}
+			.buttons {
+				padding: 48px 0 0 0;
+			}
+		}
+	}
+}
