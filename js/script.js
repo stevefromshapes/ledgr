@@ -57,8 +57,12 @@ jQuery(function() {
 	    }
 
 	    if (elementToolsCta) {
-	        // Very subtle up/down drift as the section scrolls
-	        const moveToolsCta = Math.sin(scrollY * 0.002) * 18;
+	        // Measure the parent SECTION's position, not the element's own,
+	        // since the element's own rect would already include our transform
+	        // from the previous tick and compound into runaway movement
+	        const toolsCtaSection = elementToolsCta.closest('.page-block-enterprise-tools-with');
+	        const toolsCtaTop = toolsCtaSection ? toolsCtaSection.getBoundingClientRect().top : 0;
+	        const moveToolsCta = toolsCtaTop * -0.12;
 	        elementToolsCta.style.transform = `translateY(${moveToolsCta}px)`;
 	    }
 	});
@@ -83,7 +87,9 @@ jQuery(function() {
 	    }
 
 	    if (elementToolsCta) {
-	        const moveToolsCta = Math.sin(scrollY * 0.002) * 18;
+	        const toolsCtaSection = elementToolsCta.closest('.page-block-enterprise-tools-with');
+	        const toolsCtaTop = toolsCtaSection ? toolsCtaSection.getBoundingClientRect().top : 0;
+	        const moveToolsCta = toolsCtaTop * -0.12;
 	        elementToolsCta.style.transform = `translateY(${moveToolsCta}px)`;
 	    }
 	    

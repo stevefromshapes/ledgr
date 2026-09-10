@@ -1,4 +1,20 @@
+.enterprise-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 50px;
+  border: var(--stroke-weight-1, 1px) solid rgba(236, 72, 153, 0.3);
+  background: rgba(236, 72, 153, 0.08);
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #EC4899;
+  margin: 0 0 16px 0;
+}
+
 .enterprise-dashboard {
+  width: 100%;
   border-radius: 24px;
   border: var(--stroke-weight-1, 1px) solid rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.08);
@@ -20,6 +36,12 @@
   grid-template-columns: repeat(3, 1fr);
   column-gap: 12px;
   margin: 0 0 20px 0;
+}
+.enterprise-dashboard .enterprise-dashboard-stats .stat-tile {
+  border-radius: 16px;
+  border: var(--stroke-weight-1, 1px) solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 14px;
 }
 .enterprise-dashboard .enterprise-dashboard-stats .stat-figure {
   font-size: 24px;
@@ -117,9 +139,9 @@
   row-gap: 16px;
 }
 .role-transformation-card .role-transformation-rows .role-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 24px 1fr;
   align-items: center;
-  justify-content: space-between;
   column-gap: 12px;
   padding: 16px 0 0 0;
   border-top: var(--stroke-weight-1, 1px) solid rgba(255, 255, 255, 0.1);
@@ -134,8 +156,8 @@
   color: rgba(255, 255, 255, 0.6);
 }
 .role-transformation-card .role-transformation-rows .role-row .role-arrow {
-  color: rgba(255, 255, 255, 0.3);
-  flex-shrink: 0;
+  color: #EC4899;
+  text-align: center;
 }
 .role-transformation-card .role-transformation-rows .role-row .role-to {
   color: #EC4899;
@@ -248,21 +270,21 @@ body.page-enterprise .enterprise-cta h2 {
   overflow: visible;
 }
 .page-block-enterprise-tools-with .enterprise-tools-parallax {
-  background: url('data:image/svg+xml,<svg width="728" height="728" viewBox="0 0 728 728" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(%23filter0_f)"><path d="M430.088 668 458.957 522.261 430.47 436.8 340.261 618.8 375.079 728" fill="%23EC4899"/><path d="M298.786 214.454 384.943 419.244 465.514 459.521 400.611 267.044" fill="%239333EA" fill-opacity="0.6"/></g><defs><filter id="filter0_f" x="0" y="0" width="728" height="728" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur stdDeviation="80" result="effect1_foregroundBlur"/></filter></defs></svg>') no-repeat;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.55) 0%, rgba(147, 51, 234, 0.3) 35%, rgba(147, 51, 234, 0.1) 55%, transparent 72%);
+  border-radius: 50%;
+  filter: blur(20px);
   width: 500px;
   height: 500px;
-  background-size: 500px 500px;
   position: absolute;
   top: -60px;
   right: -180px;
-  z-index: 0;
+  z-index: 5;
   display: block;
   pointer-events: none;
-  opacity: 0.7;
 }
 .page-block-enterprise-tools-with .container {
   position: relative;
-  z-index: 1;
+  z-index: 6;
 }
 
 @media all and (min-width: 1024px) {
@@ -301,8 +323,41 @@ body.page-enterprise .enterprise-cta h2 {
   .page-block-enterprise-tools-with .enterprise-tools-parallax {
     width: 728px;
     height: 728px;
-    background-size: 728px 728px;
     top: -100px;
     right: -260px;
   }
+}
+.page-block-enterprise-tools-grid,
+.page-block-enterprise-supporting-team {
+  position: relative;
+  overflow: visible;
+}
+.page-block-enterprise-tools-grid:before,
+.page-block-enterprise-supporting-team:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 220px;
+  height: 445px;
+  background: url("../images/ledgr-glow.png") no-repeat;
+  background-size: contain;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+.page-block-enterprise-tools-grid .container,
+.page-block-enterprise-supporting-team .container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-block-enterprise-tools-grid:before {
+  top: -60px;
+  left: -80px;
+}
+
+.page-block-enterprise-supporting-team:before {
+  top: 40px;
+  right: -80px;
+  left: auto;
 }
