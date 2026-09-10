@@ -233,6 +233,16 @@
   max-width: 560px !important;
 }
 
+body.page-enterprise .page-block-image-and-content h2,
+body.page-enterprise .page-block-content h2,
+body.page-enterprise .page-block-how-it-works h2,
+body.page-enterprise .page-block-works-with h2 {
+  font-size: 40px !important;
+}
+body.page-enterprise .enterprise-cta h2 {
+  line-height: 50px !important;
+}
+
 .page-block-enterprise-tools-with {
   position: relative;
   overflow: visible;

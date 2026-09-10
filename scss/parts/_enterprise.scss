@@ -237,6 +237,19 @@
 	}
 }
 
+// Enterprise page — unify section H2 sizes at 40px, excluding the CTA heading (left as-is per its own size)
+body.page-enterprise {
+	.page-block-image-and-content h2,
+	.page-block-content h2,
+	.page-block-how-it-works h2,
+	.page-block-works-with h2 {
+		font-size: 40px !important;
+	}
+	.enterprise-cta h2 {
+		line-height: 50px !important;
+	}
+}
+
 // Enterprise page — tools section parallax fractal (reuses the site's existing blob pattern)
 .page-block-enterprise-tools-with {
 	position: relative;
