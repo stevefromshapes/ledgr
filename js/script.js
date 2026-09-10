@@ -43,6 +43,7 @@ jQuery(function() {
 	    // Get the elements
 	    const elementA = document.querySelector('.masthead-parallax-a');
 	    const elementB = document.querySelector('.masthead-parallax-b');
+	    const elementToolsCta = document.querySelector('.enterprise-tools-parallax');
 	    
 	    if (elementA && elementB) {
 	        // Apply subtle rotation and movement
@@ -54,6 +55,12 @@ jQuery(function() {
 	        elementA.style.transform = `rotate(${rotateA}deg)`;
 	        elementB.style.transform = `translateY(${moveB}px) rotate(${rotateB}deg)`;
 	    }
+
+	    if (elementToolsCta) {
+	        // Very subtle up/down drift as the section scrolls
+	        const moveToolsCta = Math.sin(scrollY * 0.002) * 18;
+	        elementToolsCta.style.transform = `translateY(${moveToolsCta}px)`;
+	    }
 	});
 
 	// Optional: Throttle the scroll event for better performance
@@ -64,6 +71,7 @@ jQuery(function() {
 	    
 	    const elementA = document.querySelector('.masthead-parallax-a');
 	    const elementB = document.querySelector('.masthead-parallax-b');
+	    const elementToolsCta = document.querySelector('.enterprise-tools-parallax');
 	    
 	    if (elementA && elementB) {
 	        const rotateA = scrollY * -0.02;
@@ -72,6 +80,11 @@ jQuery(function() {
 	        
 	        elementA.style.transform = `rotate(${rotateA}deg)`;
 	        elementB.style.transform = `translateY(${moveB}px) rotate(${rotateB}deg)`;
+	    }
+
+	    if (elementToolsCta) {
+	        const moveToolsCta = Math.sin(scrollY * 0.002) * 18;
+	        elementToolsCta.style.transform = `translateY(${moveToolsCta}px)`;
 	    }
 	    
 	    ticking = false;

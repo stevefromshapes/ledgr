@@ -1,0 +1,303 @@
+// Enterprise page — hero dashboard preview card
+.enterprise-dashboard {
+	border-radius: 24px;
+	border: var(--stroke-weight-1, 1px) solid rgba(255, 255, 255, 0.20);
+	background: rgba(255, 255, 255, 0.08);
+	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.30);
+	backdrop-filter: blur(20px);
+	padding: 24px;
+	.enterprise-dashboard-label {
+		font-size: 12px;
+		line-height: 16px;
+		letter-spacing: 0.5px;
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, 0.5);
+		font-weight: 700;
+		margin: 0 0 16px 0;
+	}
+	.enterprise-dashboard-stats {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 12px;
+		margin: 0 0 20px 0;
+		.stat-figure {
+			font-size: 24px;
+			line-height: 32px;
+			font-weight: 800;
+			background: var(--pink-violet-gradient, linear-gradient(105deg, #EC4899 0%, #A855F7 100%));
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		.stat-label {
+			font-size: 12px;
+			line-height: 16px;
+			color: rgba(255, 255, 255, 0.6);
+			padding: 4px 0 0 0;
+		}
+	}
+	.enterprise-dashboard-rows {
+		display: flex;
+		flex-direction: column;
+		row-gap: 12px;
+		.dashboard-row {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 12px 0 0 0;
+			border-top: var(--stroke-weight-1, 1px) solid rgba(255, 255, 255, 0.10);
+			font-size: 14px;
+			line-height: 20px;
+			color: #FFF;
+			font-weight: 600;
+			&:first-child {
+				border-top: none;
+				padding-top: 0;
+			}
+			.dashboard-status {
+				font-size: 12px;
+				line-height: 16px;
+				font-weight: 700;
+				padding: 4px 10px;
+				border-radius: 50px;
+				white-space: nowrap;
+				&.status-running {
+					background: rgba(34, 197, 94, 0.15);
+					color: #4ADE80;
+				}
+				&.status-attention {
+					background: rgba(236, 153, 72, 0.15);
+					color: #F0A868;
+				}
+				&.status-ready {
+					background: rgba(147, 51, 234, 0.20);
+					color: #C084FC;
+				}
+			}
+		}
+	}
+}
+
+// Enterprise page — plain text card grid ("Works around your existing finance systems")
+.enterprise-tools-grid {
+	display: grid;
+	row-gap: 16px;
+}
+.enterprise-tools-card {
+	border-radius: 16px;
+	border: var(--stroke-weight-1, 1px) solid rgba(255, 255, 255, 0.15);
+	background: rgba(255, 255, 255, 0.05);
+	padding: 24px 16px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 700;
+	color: #FFF;
+	line-height: 22px;
+}
+
+// Enterprise page — role transformation card
+.role-transformation-card {
+	border-radius: 24px;
+	border: var(--stroke-weight-1, 1px) solid rgba(255, 255, 255, 0.20);
+	background: rgba(255, 255, 255, 0.08);
+	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.30);
+	backdrop-filter: blur(20px);
+	padding: 24px;
+	.role-transformation-label {
+		font-size: 12px;
+		line-height: 16px;
+		letter-spacing: 0.5px;
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, 0.5);
+		font-weight: 700;
+		margin: 0 0 20px 0;
+	}
+	.role-transformation-rows {
+		display: flex;
+		flex-direction: column;
+		row-gap: 16px;
+		.role-row {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			column-gap: 12px;
+			padding: 16px 0 0 0;
+			border-top: var(--stroke-weight-1, 1px) solid rgba(255, 255, 255, 0.10);
+			font-size: 14px;
+			line-height: 20px;
+			&:first-child {
+				border-top: none;
+				padding-top: 0;
+			}
+			.role-from {
+				color: rgba(255, 255, 255, 0.6);
+			}
+			.role-arrow {
+				color: rgba(255, 255, 255, 0.3);
+				flex-shrink: 0;
+			}
+			.role-to {
+				color: #EC4899;
+				font-weight: 700;
+				text-align: right;
+			}
+		}
+	}
+}
+
+// Enterprise page — "From first conversation to live automation" timeline
+.enterprise-timeline {
+	display: grid;
+	row-gap: 32px;
+}
+.enterprise-timeline-step {
+	text-align: center;
+	.enterprise-timeline-number {
+		width: 48px;
+		height: 48px;
+		font-size: 18px;
+		line-height: 48px;
+		text-align: center;
+		border-radius: 30px;
+		background: linear-gradient(135deg, #9333EA 0%, #EC4899 100%);
+		color: #FFF;
+		font-weight: 700;
+		display: block;
+		margin: 0 auto 16px auto;
+	}
+	h3 {
+		font-size: 18px;
+		line-height: 26px;
+		color: #FFF;
+		font-weight: 700;
+		margin: 0 0 8px 0;
+	}
+	p {
+		font-size: 14px;
+		line-height: 21px;
+		color: rgba(255, 255, 255, 0.6);
+	}
+}
+
+// Enterprise page — "What Ledgr automates in practice" grid (reuses feature-boxes-card visuals)
+.automates-grid {
+	display: grid;
+	row-gap: 16px;
+}
+.automates-card {
+	border-radius: 16px;
+	border: var(--stroke-weight-1, 1px) solid rgba(255, 255, 255, 0.15);
+	background: rgba(255, 255, 255, 0.05);
+	padding: 24px;
+	.automates-card-tick {
+		width: 32px;
+		height: 32px;
+		border-radius: 30px;
+		background: linear-gradient(135deg, #9333EA 0%, #EC4899 100%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 0 16px 0;
+		svg { display: block; }
+	}
+	h3 {
+		font-size: 16px;
+		line-height: 22px;
+		color: #FFF;
+		font-weight: 700;
+		margin: 0 0 8px 0;
+	}
+	p {
+		font-size: 14px;
+		line-height: 21px;
+		color: rgba(255, 255, 255, 0.6);
+	}
+}
+
+@media all and (min-width: 640px) {
+	.enterprise-tools-grid {
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 16px;
+	}
+	.automates-grid {
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 16px;
+	}
+}
+
+// Enterprise page — CTA heading/subtext corrections to match Figma
+.enterprise-cta {
+	h2 {
+		max-width: 480px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.enterprise-cta-subtext {
+		max-width: 560px !important;
+	}
+}
+
+// Enterprise page — tools section parallax fractal (reuses the site's existing blob pattern)
+.page-block-enterprise-tools-with {
+	position: relative;
+	overflow: visible;
+	.enterprise-tools-parallax {
+		background: url('data:image/svg+xml,<svg width="728" height="728" viewBox="0 0 728 728" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(%23filter0_f)"><path d="M430.088 668 458.957 522.261 430.47 436.8 340.261 618.8 375.079 728" fill="%23EC4899"/><path d="M298.786 214.454 384.943 419.244 465.514 459.521 400.611 267.044" fill="%239333EA" fill-opacity="0.6"/></g><defs><filter id="filter0_f" x="0" y="0" width="728" height="728" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur stdDeviation="80" result="effect1_foregroundBlur"/></filter></defs></svg>') no-repeat;
+		width: 500px;
+		height: 500px;
+		background-size: 500px 500px;
+		position: absolute;
+		top: -60px;
+		right: -180px;
+		z-index: 0;
+		display: block;
+		pointer-events: none;
+		opacity: 0.7;
+	}
+	.container { position: relative; z-index: 1; }
+}
+
+@media all and (min-width: 1024px) {
+	.enterprise-tools-grid {
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: 24px;
+		row-gap: 24px;
+	}
+	.automates-grid {
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: 24px;
+		row-gap: 24px;
+	}
+	.enterprise-timeline {
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: 32px;
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 24px;
+			left: 12.5%;
+			right: 12.5%;
+			height: 1px;
+			background: rgba(255, 255, 255, 0.15);
+			z-index: 0;
+		}
+	}
+	.enterprise-timeline-step {
+		position: relative;
+		z-index: 1;
+	}
+	.role-transformation-rows .role-row {
+		font-size: 15px;
+	}
+	.page-block-enterprise-tools-with {
+		.enterprise-tools-parallax {
+			width: 728px;
+			height: 728px;
+			background-size: 728px 728px;
+			top: -100px;
+			right: -260px;
+		}
+	}
+}
+
