@@ -361,3 +361,11 @@ body.page-enterprise .enterprise-cta h2 {
   right: -80px;
   left: auto;
 }
+
+body.page-enterprise h1 span,
+body.page-enterprise h2 span {
+  background: var(--pink-violet-gradient, linear-gradient(105deg, #EC4899 0%, #A855F7 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -364,3 +364,15 @@ body.page-enterprise {
 	right: -80px;
 	left: auto;
 }
+
+// Enterprise page — generic gradient span rule for h1/h2 headings on this page
+// (most sections don't have a shared span-gradient rule, so this covers all of them consistently)
+body.page-enterprise {
+	h1 span,
+	h2 span {
+		background: var(--pink-violet-gradient, linear-gradient(105deg, #EC4899 0%, #A855F7 100%));
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
