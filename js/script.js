@@ -43,6 +43,7 @@ jQuery(function() {
 	    // Get the elements
 	    const elementA = document.querySelector('.masthead-parallax-a');
 	    const elementB = document.querySelector('.masthead-parallax-b');
+	    const elementToolsCta = document.querySelector('.enterprise-tools-parallax');
 	    
 	    if (elementA && elementB) {
 	        // Apply subtle rotation and movement
@@ -54,6 +55,16 @@ jQuery(function() {
 	        elementA.style.transform = `rotate(${rotateA}deg)`;
 	        elementB.style.transform = `translateY(${moveB}px) rotate(${rotateB}deg)`;
 	    }
+
+	    if (elementToolsCta) {
+	        // Measure the parent SECTION's position, not the element's own,
+	        // since the element's own rect would already include our transform
+	        // from the previous tick and compound into runaway movement
+	        const toolsCtaSection = elementToolsCta.closest('.page-block-enterprise-tools-with');
+	        const toolsCtaTop = toolsCtaSection ? toolsCtaSection.getBoundingClientRect().top : 0;
+	        const moveToolsCta = toolsCtaTop * -0.12;
+	        elementToolsCta.style.transform = `translateY(${moveToolsCta}px)`;
+	    }
 	});
 
 	// Optional: Throttle the scroll event for better performance
@@ -64,6 +75,7 @@ jQuery(function() {
 	    
 	    const elementA = document.querySelector('.masthead-parallax-a');
 	    const elementB = document.querySelector('.masthead-parallax-b');
+	    const elementToolsCta = document.querySelector('.enterprise-tools-parallax');
 	    
 	    if (elementA && elementB) {
 	        const rotateA = scrollY * -0.02;
@@ -72,6 +84,13 @@ jQuery(function() {
 	        
 	        elementA.style.transform = `rotate(${rotateA}deg)`;
 	        elementB.style.transform = `translateY(${moveB}px) rotate(${rotateB}deg)`;
+	    }
+
+	    if (elementToolsCta) {
+	        const toolsCtaSection = elementToolsCta.closest('.page-block-enterprise-tools-with');
+	        const toolsCtaTop = toolsCtaSection ? toolsCtaSection.getBoundingClientRect().top : 0;
+	        const moveToolsCta = toolsCtaTop * -0.12;
+	        elementToolsCta.style.transform = `translateY(${moveToolsCta}px)`;
 	    }
 	    
 	    ticking = false;
